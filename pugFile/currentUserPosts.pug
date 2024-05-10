@@ -1,0 +1,34 @@
+doctype html
+html
+  head
+    title #{username}'s Posts
+    link(rel="stylesheet", href="/resources/css/main.css")
+    link(rel="stylesheet", href="/resources/css/currentUserPosts.css")
+    script(src="/resources/js/currentUserPosts.js")
+
+  body
+    header.main-header
+      .header-content
+        h1 #{username}'s Recent Posts
+      .sorting-buttons
+        button(data-sort-type='postingPost', onclick="location.href='/create-post'") Create Post
+        button(data-sort-type='mostLikes') Sort by Most Likes
+        button(data-sort-type='leastLikes') Sort by Least Likes
+        button(data-sort-type='mainPost', onclick="location.href='/'") Posts
+    main.main-content
+      if posts.length > 0
+        .posts-container
+          each post in posts
+            .post
+              .post-header
+                h2 Post ID: #{post.post_id}
+                p.post-time Time Posted: #{post.formattedCreatedAt}
+              .post-body
+                p #{post.content}
+              .post-footer
+                .like-count #{post.like_count} Likes
+                if post.canEdit
+                  button.button-edit(type='button', data-post-id=post.post_id) Edit
+                button.button-delete(type='button', data-post-id=post.post_id) Delete
+      else
+        p No posts found.

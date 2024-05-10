@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title Edit Post
+    link(rel="stylesheet", href="/resources/css/main.css")
+  body
+    header.main-header
+      h1 Edit Post
+
+    main.main-content
+      form(action='/update-post/' + post.post_id, method='post')
+        .form-group
+          label(for='content') Edit Your Post:
+          textarea(name='content', required)= post.content
+        
+        button(type='submit') Update Post
+
+      a(href='/posts') Cancel

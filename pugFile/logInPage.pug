@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title Main Page
+    script(src="/resources/js/logIn.js")
+    link(rel="stylesheet", href="/resources/css/main.css")
+  body
+    header.main-header
+      h1 Welcome to Our Blog!
+
+    main.main-content
+      section.login
+        h2 Login
+        form#login-form
+          input(type='text', placeholder='username', name='username')
+          input(type='password', placeholder='password', name='password')
+          button(type='submit').btn Sign In
+          a(href="/signUp").btn Sign Up

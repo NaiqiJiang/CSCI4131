@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title Create Post
+    link(rel="stylesheet", href="/resources/css/main.css")
+    link(rel="stylesheet", href="/resources/css/createPost.css")
+  body
+    header.main-header
+      h1 Create New Post
+
+    main.main-content
+      form(action='/posts', method='post')
+        .form-group
+          label(for='content') Your Post:
+          textarea(name='content', required, minlength='10')
+        
+        .form-buttons
+          button(type='submit', class='btn') Post
+          a.btn(href='/posts') Cancel

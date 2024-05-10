@@ -1,0 +1,161 @@
+.main-content {
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  .posts-container {
+    margin-top: 20px;
+  }
+  
+  .post {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-size: 1rem;
+  }
+  
+  .post:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
+  
+  .post-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* Ensure the post header takes full width */
+  }
+  
+  .post-username {
+    flex: 0 0 auto; /* Do not grow or shrink, auto basis */
+  }
+  
+  .post-content {
+    flex: 1; /* Allow content to grow and take available space */
+    text-align: center;
+    padding: 0 10px; /* Add padding for spacing */
+  }
+  
+  .post-date {
+    flex: 0 0 auto; /* Do not grow or shrink, but can adjust the basis */
+    text-align: right;
+    margin-right: 15%; /* Increase margin to move the date left */
+  }
+  
+  .post-body {
+    margin: 0;
+    color: #333;
+    font-size: 1em;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+  }
+  
+  .post-actions {
+    flex: 1 0 auto; /* Do not grow or shrink, auto basis */
+  }
+  
+  .post-actions button {
+    background-color: #008cba;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .post-actions button:hover {
+    background-color: #005f73;
+  }
+
+  .button-like {
+    margin-left: auto; /* Push the button to the far right */
+    padding: 5px 10px;
+    /* Other styles remain the same */
+  }
+  
+  .button-like.unliked {
+    background-color: #f44336;
+  }
+  
+  .like-count {
+    flex: auto;
+    margin-right: 1em; /* Space between the like count and the like button */
+    background-color: cyan; /* A gold background for a 'starred' look */
+    color: #ffffff; /* White text for contrast */
+    font-weight: bold; /* Make the text bold */
+    padding: 0.1em 0.7em; /* Padding for a pill-shaped appearance */
+    border-radius: 1em; /* Fully rounded corners for a pill shape */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    display: inline-block; /* Ensures that the background and padding are applied correctly */ 
+  }
+  
+  .main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+.header-content {
+    flex-grow: 1; /* Makes the div grow to take up available space */
+    display: flex;
+    justify-content: center; /* Center the content */
+}
+
+.login-button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.sort-buttons-container {
+  display: flex;
+  justify-content: flex-end; /* Aligns children (buttons) to the end (right) */
+  margin-bottom: 10px; /* Optional: Adds some space below the sort buttons */
+}
+
+/* Style for the sort buttons */
+#sort-most-likes,
+#sort-least-likes {
+  margin-left: 10px; /* Space between buttons */
+  padding: 10px 15px; /* Padding inside the buttons */
+  cursor: pointer; /* Changes the cursor to a pointer when hovering over the buttons */
+  /* Add more styles as needed */
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px; /* Adjust as needed */
+}
+
+.pagination a {
+  text-decoration: none;
+  color: white;
+  background-color: #4CAF50; /* Green color */
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.pagination a:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+* {
+  box-sizing: border-box;
+}

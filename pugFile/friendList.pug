@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title Friends List
+    link(rel="stylesheet", href="/resources/css/main.css")
+  body
+    header.main-header
+      h1 Your Friends
+
+    main.main-content
+      ul.friends
+        each friend in friends
+          li.friend-item
+            img(src=`/resources/icon/profiles/${friend.username}.png`, alt=`${friend.username}`)
+            h2= friend.name
+            p= friend.bio

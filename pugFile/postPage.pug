@@ -1,0 +1,37 @@
+doctype html
+html
+  head
+    title Posts
+    script(src="/resources/js/postPage.js")
+    link(rel="stylesheet", href="/resources/css/main.css")
+    link(rel="stylesheet", href="/resources/css/postPage.css")
+  body
+    header.main-header
+      div.header-content
+        h1 Posted Content
+      if isLoggedIn
+        button.login-button #{username}
+      else
+        button.login-button Login
+    main.main-content
+      .sort-buttons-container
+        button#sort-most-likes Sort by Most Likes
+        button#sort-least-likes Sort by Least Likes
+      .posts-container
+        each post in posts
+          .post
+            .post-header
+              span.post-username= post.username
+              div.post-content= post.content
+              span.post-date= post.created_at.toLocaleString()
+            .post-actions
+              span.like-count= post.like_count + ' likes'
+              button.button-like(data-id=post.post_id onclick='toggleLike(this)')= post.liked ? 'Unlike' : 'Like'
+      // Pagination controls
+      if totalPages > 1
+        .pagination
+          if currentPage > 1
+            a(href=`/posts?page=${currentPage-1}`) Previous
+          | Page #{currentPage} of #{totalPages}
+          if currentPage < totalPages
+            a(href=`/posts?page=${currentPage+1}`) Next

@@ -1,0 +1,121 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  color: #343a40;
+  line-height: 1.5;
+}
+
+/* Main Layout */
+header.main-header {
+  background-color: #1da1f2;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header.main-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+main.main-content {
+  width: 85%;
+  margin: auto;
+}
+
+/* Form Styles */
+form {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+input[type='text'],
+input[type='password'],
+input[type='email'],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
+
+
+
+.btn {
+  background-color: #28a745; /* Green background */
+  color: #fff; /* White text */
+  padding: 10px 20px; /* Padding around the text */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* Removes underline from links */
+  display: inline-block; /* Allows setting padding and margins */
+  margin: 5px; /* Space around the button */
+  font-size: 16px; /* Explicit font size */
+  box-sizing: border-box; /* Padding and border are included in the width/height */
+  width: 100px; /* Fixed width */
+  height: 40px; /* Fixed height */
+  text-align: center; /* Center the text inside the button */
+  line-height: 20px; /* Center the text vertically if height is defined */
+}
+
+.btn + .btn {
+  margin-left: 10px;
+}
+
+.btn:hover {
+  background-color: #218838; /* Darker green background on hover */
+}
+
+/* List Styles */
+ul {
+  list-style: none;
+}
+
+li.friend-item, .post {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile and Post Styling */
+.profile, .post {
+  display: flex;
+  align-items: center;
+}
+
+img {
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.profile img, .post img {
+  width: 60px; /* Adjust size as needed */
+}
+
+.profile h2, .post h2 {
+  margin: 0 0 5px 0;
+}
+
+.profile p, .post p {
+  margin: 0;
+}
+
+
+.navigation {
+  text-align: center;
+  margin-bottom: 20px;
+}

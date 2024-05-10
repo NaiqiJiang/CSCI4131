@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    title Sign Up
+    link(rel="stylesheet", href="/resources/css/main.css")
+  body
+    header.main-header
+      h1 Create Your Account
+
+    main.main-content
+      form(action='/register', method='post')
+        input(type='text', placeholder='Username', name='username', required)
+        input(type='email', placeholder='Email', name='email', required)
+        input(type='password', placeholder='Password', name='password', required)
+        input(type='password', placeholder='Confirm Password', name='confirmPassword', required)
+
+        // Security Questions and Answers
+        label(for='securityQuestion1') What's your favorite color?
+        input(type='text', placeholder='Favorite Color', name='securityAnswer1', required)
+
+        label(for='securityQuestion2') What's your pet's name?
+        input(type='text', placeholder="Pet's Name", name='securityAnswer2', required)
+
+        label(for='securityQuestion3') What's your name?
+        input(type='text', placeholder='Your Name', name='securityAnswer3', required)
+
+        button(type='submit').btn Sign Up

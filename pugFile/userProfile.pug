@@ -1,0 +1,33 @@
+doctype html
+html
+  head
+    title User Profile
+    script(src="/resources/js/userProfile.js")
+    link(rel="stylesheet", href="/resources/css/main.css")
+    link(rel="stylesheet", href="/resources/css/userProfile.css")
+  body
+    header.main-header
+      h1 User Profile
+
+    main.main-content
+      .profile-container
+        .user-details
+          img#userPhotoImage(src='/resources/images/defaultUserPhoto.png', alt='User Photo')
+          .info
+            .form-group
+              label(for='username') Username:
+              input(type='text', name='username', value=user.username, required)
+              input(type='hidden', id='username', value=user.username)
+            .form-group
+              label(for='email') Email:
+              input(type='email', name='email', value=user.email, required)
+            .form-group
+              label(for='currentPassword') Current Password:
+              input(type='password', name='currentPassword', value=user.password, required)
+        
+        .profile-actions
+          button#create-post-button(type='button' onclick='window.location="/posts"') Post
+          button#create-post-button(type='button' onclick='window.location="/create-post"') Create Post
+          button#recent-posts-button(type='button' onclick='window.location="/recent-posts"') Recent Posts
+          button#logout-button(type='button') Log Out
+          button#delete-account-button(type='button') Delete Account

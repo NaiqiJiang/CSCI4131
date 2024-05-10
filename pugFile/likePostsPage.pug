@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title Liked Posts
+    link(rel="stylesheet", href="/resources/css/main.css")
+    link(rel="stylesheet", href="/resources/css/userProfile.css")
+
+  body
+    header.main-header
+      .header-content
+        h1 Liked Posts
+
+    main.main-content
+      .posts-container
+        each post in posts
+          .post
+            .post-header
+              span.post-username= post.username
+              span.post-date= post.created_at.toLocaleString()
+
+            .post-content
+              div.post-body= post.content
+
+            .post-actions
+              span.like-count= post.like_count + ' likes'

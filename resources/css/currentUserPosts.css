@@ -1,0 +1,80 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #1da1f2;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.sorting-buttons button {
+  margin: 5px;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sorting-buttons button:hover {
+  opacity: 0.5;
+}
+
+.posts-container {
+  margin: 20px;
+  padding: 10px;
+}
+
+.post {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+.post-body {
+    text-align: center;
+    flex-grow: 1;
+}
+  
+.like-count {
+    margin-left: auto;
+    padding: 5px 10px;
+    background-color: cyan;
+    color: white;
+    border-radius: 15px;
+    display: inline-flex;
+    align-items: center;
+}
+  
+.button-edit,
+.button-delete {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f44336;
+    color: white;
+}
+  
+.button-edit:hover,
+.button-delete:hover {
+    background-color: #d32f2f;
+}
+
+.post-time {
+    font-weight: bold;
+}
